@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadro de Tarefas Web/Mobile</title>
+
+    <!-- Nosso CSS Customizado (Sem Tailwind!) -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- React & ReactDOM (CDN) -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- Babel (Para compilar JSX direto no navegador) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- A ordem importa! Carregamos Ícones -> Componentes filhos -> Componente pai -> Inicialização -->
+    <script type="text/babel" src="./js/Icons.jsx"></script>
+    <script type="text/babel" src="./js/components/TaskCard.jsx"></script>
+    <script type="text/babel" src="./js/components/BoardColumn.jsx"></script>
+    <script type="text/babel" src="./js/App.jsx"></script>
+    <script type="text/babel" src="./js/main.jsx"></script>
+  </body>
+</html>
